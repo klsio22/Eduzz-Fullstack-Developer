@@ -89,3 +89,136 @@ div(); //---
   do array
   ===========================================================================
 */
+const arrTerator3 = numbers2.entries();
+//Ele mostra a posição e o valor daquela posição dentro de um unico array
+
+console.log(arrTerator3.next()) //{ value: [ 0, 1 ], done: false }  
+console.log(arrTerator3.next()) //{ value: [ 1, 2 ], done: false }
+console.log(arrTerator3.next()) //{ value: [ 2, 69 ], done: false }
+console.log(arrTerator3.next()) //{ value: [ 3, 45 ], done: false }
+console.log(arrTerator3.next()) //{ value: undefined, done: true } 
+
+div(); //---
+
+/* 
+  ===========================================================================
+  find
+  Retorna o primeiro item de um arrry que satisfaz a condição
+  ===========================================================================
+*/
+
+const firstGreaterThanTwo = numbers2.find(value => value > 2);
+
+console.log(firstGreaterThanTwo);
+//69
+
+div(); //---
+
+/* 
+  ===========================================================================
+  findIndex
+  O método findIndex() retorna o índice no array do primeiro elemento que 
+  satisfizer a função de teste provida. Caso contrário, retorna -1, indicando 
+  que nenhum elemento passou no teste.
+  ===========================================================================
+*/
+
+const findIndexGreatThanTwo = numbers2.findIndex(value => value > 2);
+console.log(findIndexGreatThanTwo);
+// 2
+div(); //---
+
+/* 
+  ===========================================================================
+  filter
+  Retorna um novo array com todos os elementos que satisfazem a condição
+  ===========================================================================
+*/
+
+const allValuesGreaterThantwo = numbers2.filter(value => value > 2)
+console.log(allValuesGreaterThantwo)
+//[ 69, 45 ]
+
+div(); //---
+
+/* 
+  ===========================================================================
+  indexOf
+  Retorna o primeiro indice em que um elemento pode ser encontrado no array
+  ===========================================================================
+*/
+
+const numbers3 = [138, 10, 97, 13, 10]
+
+const firstIntexOfItem = numbers3.indexOf(10)
+console.log(firstIntexOfItem)
+
+div(); //---
+//1
+/* 
+  ===========================================================================
+  lastIndexOf
+  Retorna o ultimo indice em que um elemento pode ser encontrado no array
+  ===========================================================================
+*/
+
+
+const lastIntexOfItem = numbers3.lastIndexOf(10);
+console.log(lastIntexOfItem)
+//4
+div(); //---
+/* 
+  ===========================================================================
+  incluides
+  Retornar um booleano verifica se determinado elemento existe no array
+  ===========================================================================
+*/
+
+let hasItem = numbers3.includes(2)
+console.log(hasItem) //false
+
+hasItem = numbers3.includes(97)
+console.log(hasItem) //true
+
+div(); //--
+/* 
+  ===========================================================================
+  some
+  Retornar um booleano verificando se pelo menos um item de um array satifaz 
+  a condição 
+  ===========================================================================
+*/
+
+let hasSameEvenNumber = numbers3.some(value => value % 2 === 0)
+console.log(hasSameEvenNumber) //true
+hasSameEvenNumber = numbers3.some(value => value % 4 === 0)
+console.log(hasSameEvenNumber) //false
+
+const student = [{
+    name: "Mary",
+    grade: 6.5
+  },
+  {
+    name: "John",
+    grade: 7
+  },
+  {
+    name: "Lany",
+    grade: 5
+  },
+]
+
+console.log(student.some(student => student.grade >= 7)) //true
+console.log(student.find(student => student.grade >= 7)) //Saber quem é o aluno
+console.log(student.findIndex(student => student.grade >= 7)) //Saber a posição do aluno no array 
+
+div(); //--
+/* 
+  ===========================================================================
+  every
+  Saber se todos os os itens de um array satisfazem a condição
+  ===========================================================================
+*/
+
+console.log(student.every(student => student.grade >= 7)) //false sabe se todos os alnos passaram
+console.log(student.find(student => student.grade < 7)) // saber o primeiro estudante que não passou 
