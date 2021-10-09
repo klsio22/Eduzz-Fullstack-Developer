@@ -1,4 +1,4 @@
-let div = () => console.log("--".repeat(20));
+const {div} =  require('./divisor.js')
 
 const myText = String("Hello prototype");
 

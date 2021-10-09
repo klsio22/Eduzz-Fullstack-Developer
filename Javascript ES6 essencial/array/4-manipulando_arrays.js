@@ -1,5 +1,5 @@
 //push() Adiciona o elemento ao final da array
-let div = () => console.log("--".repeat(20));
+const {div} =  require('./divisor.js')
 
 const fruts = ['banana', 'melancia', 'abacate'];
 const frutsLenght = fruts.push('maça')
