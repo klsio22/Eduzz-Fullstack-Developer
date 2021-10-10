@@ -72,13 +72,14 @@ div(); //---
   Retorna um Arry Iterator que contém os valores para cada elemento do array
   ===========================================================================
 */
-
+console.log('------------Teste------------')
 const arrTerator2 = numbers2.values();
+
 console.log(arrTerator2.next()) //{ value: 1, done: false }
 console.log(arrTerator2.next()) //{ value: 2, done: false }
 console.log(arrTerator2.next()) //{ value: 69, done: false }
 console.log(arrTerator2.next()) //{ value: 45, done: false }
-console.log(arrTerator2.next()) //{ value: undefined, done: true }
+console.log(arrTerator2.next()) //{ value: undefined, done: true } 
 
 div(); //---
 
@@ -215,10 +216,10 @@ console.log(student.findIndex(student => student.grade >= 7)) //Saber a posiçã
 div(); //--
 /* 
   ===========================================================================
-  every
+  Every
   Saber se todos os os itens de um array satisfazem a condição
   ===========================================================================
 */
 
-console.log(student.every(student => student.grade >= 7)) //false sabe se todos os alnos passaram
+console.log(student.every(student => student.grade >= 7)) //false sabe se todos os alunos passaram
 console.log(student.find(student => student.grade < 7)) // saber o primeiro estudante que não passou 
