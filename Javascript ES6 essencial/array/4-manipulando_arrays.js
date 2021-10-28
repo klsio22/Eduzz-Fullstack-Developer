@@ -7,11 +7,11 @@ const {
   div
 } = require('./0-divisor.js')
 
-const fruts = ['banana', 'melancia', 'abacate'];
-const frutsLenght = fruts.push('maça')
+const fruits = ['banana', 'melancia', 'abacate'];
+const fruitsLenght = fruits.push('maça')
 
-console.log(frutsLenght)
-console.log(fruts)
+console.log(fruitsLenght)
+console.log(fruits)
 
 div(); //---
 /* 
@@ -20,9 +20,9 @@ div(); //---
   ===========================================================================
 */
 
-const removeItem = fruts.pop()
+const removeItem = fruits.pop()
 console.log("Fruta removido: " + removeItem)
-console.log(fruts)
+console.log(fruits)
 
 div(); //------
 /* 
@@ -32,10 +32,10 @@ div(); //------
   ===========================================================================
 */
 
-const newfrutsLenght = fruts.unshift('Tomate')
+const newfruitsLenght = fruits.unshift('Tomate')
 
-console.log("novo tamnho da lista de frutas : " + newfrutsLenght)
-console.log(fruts)
+console.log("novo tamnho da lista de frutas : " + newfruitsLenght)
+console.log(fruits)
 
 div(); //-----
 
@@ -46,10 +46,10 @@ div(); //-----
   ===========================================================================
 */
 
-const removeNewItem = fruts.shift();
+const removeNewItem = fruits.shift();
 
 console.log("Fruta removido : " + removeNewItem)
-console.log(fruts)
+console.log(fruits)
 
 div(); //---
 
@@ -60,7 +60,7 @@ div(); //---
 */
 
 const chips = ['Coxinha', 'kibe', 'empada']
-const foods = fruts.concat(chips)
+const foods = fruits.concat(chips)
 console.log(foods)
 
 

@@ -52,9 +52,12 @@ div(); //----------
   ===========================================================================
 */
 const cpf = [199, 277, 922]
+
 const digitFinal = ["", 55]
 const digitJunction = cpf.join("-") + digitFinal.join(".");
 console.log("CPF:", digitJunction); //1-2-3-4-5
+
+
 
 div(); //----------
 /* 
