@@ -12,5 +12,6 @@ console.log(tomato,tomato2)
 
  [apple2, banana2, orange2] = ['Apple', 'Banana']
 
-//Caso indice não existir teremos uma váriavel undefined diferente de um variavel multidimencinal que para no nosso programa
+/* Caso indice não existir teremos uma váriavel undefined diferente de um variavel  
+multidimencinal que para no nosso programa */
 console.log(orange2)//Cannot set property 'Orange' of undefined 
