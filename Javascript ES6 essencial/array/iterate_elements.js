@@ -5,7 +5,7 @@ const {
 /* 
   ===========================================================================
   Map
-  retorna um novo arry , de mesmo tamalho , iteando cada item de um arry
+  retorna um novo arry , de mesmo tamalho , iteando cada item de um array
   ===========================================================================
 */
 
