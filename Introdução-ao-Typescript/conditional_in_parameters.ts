@@ -1,4 +1,4 @@
-interface IUser {
+/* interface IUser {
   id: string;
   email: string;
 }
@@ -15,4 +15,20 @@ function redirect(user: IUser | IAdmin) {
   //Redirecionar para a área do usuário
 }
 
+ */
 
+/* Outra forma de fazer */
+
+interface IUser {
+  id: string;
+  email: string;
+  job?: 'gerente' | 'Coordenador' | 'supervisor' | 'funcionário';
+}
+
+function redirect(user: IUser ) {
+  if (user.job) {
+    //Redirecionar (user.job)
+  }
+
+  //Redirecionar para a área do usuário
+}

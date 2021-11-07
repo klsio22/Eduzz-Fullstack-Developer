@@ -5,3 +5,7 @@
 ### Para exetudar o projeto 
 
 `yarn parcel index.html`
+
+### Instalar typagens do typescript (ts2+) do jquery
+
+`npm install --save-dev @types/jquery`
