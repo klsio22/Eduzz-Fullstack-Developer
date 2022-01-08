@@ -15,7 +15,7 @@ console.log(tomato, tomato2)
 /* Caso índice não existir teremos uma váriavel undefined diferente de um variavel multidimensional que para no nosso programa */
 console.log(orange2) //Cannot set property 'Orange' of undefined 
 
-
+let arr = ['Apple', 'orage']
 let obj = {
   name: 'Celso'
 }
@@ -24,4 +24,5 @@ let {
   name: name2
 } = obj
 
+name2 = 'Herrique'
 console.log(name2)
