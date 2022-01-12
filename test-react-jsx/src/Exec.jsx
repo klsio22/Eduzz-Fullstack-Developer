@@ -1,8 +1,11 @@
 import React from "react";
+import App from "./App";
 const Exec = () => {
   return (
     <div>
-      <h1>Ola Galesyte</h1>
+      <App/>
+      <hr/>
+      <h1>Ola Eai galera</h1>
       <p>Vamos nessa</p>
     </div>
   );
