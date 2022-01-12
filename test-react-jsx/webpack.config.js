@@ -1,14 +1,20 @@
+// eslint-disable-next-line no-undef
 const path = require("path");
+// eslint-disable-next-line no-undef
 const HtmlWebpackPlugin = require("html-webpack-plugin"); //installed via npm
-
+// eslint-disable-next-line no-undef
 require("@babel/core").transformSync("code", {
   plugins: ["@babel/plugin-syntax-jsx"],
 });
 
+// eslint-disable-next-line no-undef
 module.exports = {
-  mode: 'development',
+  devtool:"source-map",
+  // eslint-disable-next-line no-undef
+  mode: "development",
   entry: "./src/index.jsx",
   output: {
+    // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, "./dist"),
     filename: "bundler.js",
   },
@@ -32,9 +38,9 @@ module.exports = {
     }),
   ],
 
-   resolve: {
+  resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
-  }, 
+  },
 
   /*  devServer: {
     static: {

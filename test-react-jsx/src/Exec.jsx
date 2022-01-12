@@ -3,8 +3,8 @@ import App from "./App";
 const Exec = () => {
   return (
     <div>
-      <App/>
-      <hr/>
+      <App />
+      <hr />
       <h1>Ola Eai galera</h1>
       <p>Vamos nessa</p>
     </div>

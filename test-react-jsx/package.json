@@ -47,7 +47,7 @@
     "@babel/eslint-plugin": "^7.16.5",
     "@babel/plugin-syntax-jsx": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "8",
     "babel-loader": "^8.2.3",
     "eslint": "^8.6.0",
     "eslint-plugin-babel": "^5.3.1",
