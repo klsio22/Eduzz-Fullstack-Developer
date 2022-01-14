@@ -1,36 +1,11 @@
 import React from 'react';
+import { Button } from './componets/Button';
+import { listUsers } from './listUsers';
 
-const listCustumer = [
-  {
-    id: 1,
-    name: 'kleber',
-    skills: ['HTML', 'JS', 'SASS', 'React'],
-  },
-  {
-    id: 2,
-    name: 'Tiago Silva',
-    skills: ['Node', 'Typescript', 'Express', 'Prisma'],
-  },
-  {
-    id: 3,
-    name: 'Roberto',
-    skills: ['HTML', 'CSS'],
-  },
-
-  {
-    id: 4,
-    name: 'Andre Silva',
-    skills: ['Python'],
-  },
-  {
-    id: 5,
-    name: 'Sara Morais',
-    skills: ['HTML', 'Ruby', 'Elixir'],
-  },
-];
 
 const ListKeys = () => {
-  const handleClick = (e, id) => {
+  
+  const handleClick = (id) => {
     console.log('Deleta cliente');
     alert(`Id do cliente ${id}`);
   };
@@ -39,10 +14,10 @@ const ListKeys = () => {
     return (
       <div key={`customer- ${custumer.id}`}>
         <li>
-          {custumer.name}{' '}
-          <button onClick={(e) => handleClick(e, custumer.id)}>
-            Deletar Cliente
-          </button>{' '}
+          {custumer.name}
+          <Button onClick={() => handleClick(custumer.id)}>
+            Deletar cliente
+          </Button>
         </li>
         {custumer.skills.map(renderSkills)}
       </div>
@@ -61,8 +36,7 @@ const ListKeys = () => {
     <div>
       <h1>Digital Innovation One</h1>
       <p>Bem vindo a nossa aula</p>
-
-      <ul>{listCustumer.map(rendersCustumers)}</ul>
+      <ul>{listUsers.map(rendersCustumers)}</ul>
     </div>
   );
 };
