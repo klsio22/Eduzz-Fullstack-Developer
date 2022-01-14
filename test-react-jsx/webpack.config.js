@@ -1,22 +1,22 @@
 // eslint-disable-next-line no-undef
-const path = require("path");
+const path = require('path');
 // eslint-disable-next-line no-undef
-const HtmlWebpackPlugin = require("html-webpack-plugin"); //installed via npm
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 // eslint-disable-next-line no-undef
-require("@babel/core").transformSync("code", {
-  plugins: ["@babel/plugin-syntax-jsx"],
+require('@babel/core').transformSync('code', {
+  plugins: ['@babel/plugin-syntax-jsx'],
 });
 
 // eslint-disable-next-line no-undef
 module.exports = {
-  devtool:"source-map",
+  devtool: 'source-map',
   // eslint-disable-next-line no-undef
-  mode: "development",
-  entry: "./src/index.jsx",
+  mode: 'development',
+  entry: './src/index.jsx',
   output: {
     // eslint-disable-next-line no-undef
-    path: path.resolve(__dirname, "./dist"),
-    filename: "bundler.js",
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundler.js',
   },
 
   module: {
@@ -25,7 +25,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
     ],
@@ -33,13 +33,12 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html",
+      template: './public/index.html',
+      filename: './index.html',
     }),
   ],
 
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-
 };

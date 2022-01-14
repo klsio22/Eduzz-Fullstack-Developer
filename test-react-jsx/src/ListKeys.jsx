@@ -1,39 +1,49 @@
-import React from "react";
+import React from 'react';
 
 const listCustumer = [
   {
     id: 1,
-    name: "kleber",
-    skills: ["HTML", "JS", "SASS", "React"],
+    name: 'kleber',
+    skills: ['HTML', 'JS', 'SASS', 'React'],
   },
   {
     id: 2,
-    name: "Tiago Silva",
-    skills: ["Node", "Typescript", "Express", "Prisma"],
+    name: 'Tiago Silva',
+    skills: ['Node', 'Typescript', 'Express', 'Prisma'],
   },
   {
     id: 3,
-    name: "Roberto",
-    skills: ["HTML", "CSS"],
+    name: 'Roberto',
+    skills: ['HTML', 'CSS'],
   },
 
   {
     id: 4,
-    name: "Andre Silva",
-    skills: ["Python"],
+    name: 'Andre Silva',
+    skills: ['Python'],
   },
   {
     id: 5,
-    name: "Sara Morais",
-    skills: ["HTML", "Ruby", "Elixir"],
+    name: 'Sara Morais',
+    skills: ['HTML', 'Ruby', 'Elixir'],
   },
 ];
 
 const ListKeys = () => {
+  const handleClick = (e, id) => {
+    console.log('Deleta cliente');
+    alert(`Id do cliente ${id}`);
+  };
+
   const rendersCustumers = (custumer) => {
     return (
       <div key={`customer- ${custumer.id}`}>
-        <li>{custumer.name}</li>
+        <li>
+          {custumer.name}{' '}
+          <button onClick={(e) => handleClick(e, custumer.id)}>
+            Deletar Cliente
+          </button>{' '}
+        </li>
         {custumer.skills.map(renderSkills)}
       </div>
     );
@@ -41,7 +51,7 @@ const ListKeys = () => {
 
   const renderSkills = (skill, index) => {
     return (
-      <div style={{ paddingLeft: "30px" }} key={`Skills : ${index}`}>
+      <div style={{ paddingLeft: '30px' }} key={`Skills : ${index}`}>
         <li>{skill};</li>
       </div>
     );
